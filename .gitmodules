@@ -1,3 +1,6 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:olehvolynets/nvim-config.git
+[submodule "fish"]
+	path = fish
+	url = git@github.com:olehvolynets/fish-config.git
