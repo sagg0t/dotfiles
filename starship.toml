@@ -1,0 +1,30 @@
+palette = 'sigma'
+
+[palettes.sigma]
+black = '#161616'
+white = '#F6FADE'
+green = '#5AD1AA'
+red = '#F92672'
+purple = '#9C75F0'
+blue = '#51A3D6'
+yellow = '#FFD700'
+cyan = '#00BFA4'
+
+[character]
+success_symbol = '[➜](bold cyan)'
+error_symbol = '[➜](bold red)'
+
+[jobs]
+disabled = true
+
+[directory]
+style = 'bold purple'
+
+[git_branch]
+style = 'bold red'
+
+[docker_context]
+disabled = true
+
+[nodejs]
+disabled = true
