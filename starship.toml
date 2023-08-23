@@ -125,6 +125,7 @@ version_format = "${raw}"
 format = "[$symbol]($style)[$version ](bold yellow)"
 version_format = "${raw}"
 symbol = " "
+detect_extensions = []
 # disabled = true
 
 [docker_context]
