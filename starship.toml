@@ -51,7 +51,7 @@ $container\
 $shell\
 $character"""
 
-palette = "catppuccin_mocha"
+palette = "gruvbox"
 
 [palettes.sigma]
 black = "#161616"
@@ -91,6 +91,17 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
+[palettes.gruvbox]
+black = "#1D2021"
+white = "#D4BE98"
+red = "#EA6962"
+green = "#A9B665"
+yellow = "#D8A657"
+blue = "#7DAEA3"
+magenta = "#D3869B"
+cyan = "#89B482"
+
+
 # [hostname]
 # ssh_symbol = " "
 
@@ -114,7 +125,8 @@ vimcmd_symbol = "[❮](green)"
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
-style = "bold lavender"
+# style = "bold lavender"
+style = "bold blue"
 
 [git_branch]
 format = "[$symbol$branch(:$remote_branch)]($style) "
