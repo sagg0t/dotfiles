@@ -1,14 +1,14 @@
 local palette = {
-    fg = "#D4BE98",
-    bg = "#1D2021",
-    bg_bright = "#EDDEB5",
+    bg = "#1A1A1A",
+    fg = "#D4D8C0",
+    green = "#44B273",
+    red = "#DC3C70",
+    magenta = "#A285EA",
+    blue = "#58A3CF",
+    yellow = "#FFEE99",
+    cyan = "#33998A",
+    bg_bright = "#373C45",
     overlay = "#3C3836",
-    red = "#EA6962",
-    green = "#A9B665",
-    yellow = "#D8A657",
-    blue = "#7DAEA3",
-    magenta = "#D3869B",
-    cyan = "#89B482",
 }
 
 local active_tab = {
@@ -74,3 +74,4 @@ function M.window_frame()
 end
 
 return M
+

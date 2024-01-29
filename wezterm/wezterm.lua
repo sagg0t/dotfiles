@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
-local colors = require("lua.gruvbox.gruvbox").colors()
-local window_frame = require("lua.gruvbox.gruvbox").window_frame()
+local colors = require("lua.sigma.sigma").colors()
+local window_frame = require("lua.sigma.sigma").window_frame()
 
 local config = wezterm.config_builder()
 
@@ -18,18 +18,13 @@ config.harfbuzz_features = {
     "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08",
 }
 
+config.font = wezterm.font("CodeNewRoman Nerd Font")
+-- config.font = wezterm.font("Hack Nerd Font")
 -- config.font = wezterm.font("Monaspace Neon Var") -- neo-grotesque sans
-config.font = wezterm.font("Monaspace Argon Var") -- humanist sans
+-- config.font = wezterm.font("Monaspace Argon Var") -- humanist sans
 -- config.font = wezterm.font("Monaspace Xenon Var") -- serif
 -- config.font = wezterm.font("Monaspace Radon Var") -- handwriting
 -- config.font = wezterm.font("Monaspace Krypton Var") -- mechanical sans
--- config.font_rules = {
---     {
---         intensity = "Normal",
---         italic = true,
---         font = wezterm.font("Monaspace Neon Var", { weight = "Bold" })
---     }
--- }
 
 config.colors = colors
 config.window_frame = window_frame
@@ -44,7 +39,7 @@ config.background = {
     {
         source = {
             -- File = "/Users/oleh/Pictures/wallpapers/ahri_spirit_blossom_art.jpg"
-            File = "/Users/oleh/Pictures/wallpapers/mythra_art_light.jpg"
+            File = "/Users/sagg0t/Pictures/wallpapers/mythra_art_light.jpg"
         },
         opacity = 0.55
     },

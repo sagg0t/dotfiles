@@ -20,7 +20,7 @@ $zig\
 $haskell\
 $ocaml\
 $vlang\
-$nodejs\
+$bun\
 $deno\
 $php\
 $cmake\
@@ -51,55 +51,17 @@ $container\
 $shell\
 $character"""
 
-palette = "gruvbox"
+palette = "sigma"
 
 [palettes.sigma]
-black = "#161616"
-white = "#F6FADE"
-green = "#5AD1AA"
-red = "#F92672"
-purple = "#9C75F0"
-blue = "#51A3D6"
-yellow = "#FFD700"
-cyan = "#00BFA4"
-
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
-
-[palettes.gruvbox]
-black = "#1D2021"
-white = "#D4BE98"
-red = "#EA6962"
-green = "#A9B665"
-yellow = "#D8A657"
-blue = "#7DAEA3"
-magenta = "#D3869B"
-cyan = "#89B482"
+black = "#1a1a1a"
+white = "#D4D8C0"
+green = "#44B273"
+red = "#dc3c70"
+purple = "#a285ea"
+blue = "#58a3cf"
+yellow = "#FFEE99"
+cyan = "#33998a"
 
 
 # [hostname]
