@@ -10,32 +10,6 @@ $git_state\
 $git_metrics\
 $git_status\
 \
-$c\
-$golang\
-$ruby\
-$lua\
-$python\
-$rust\
-$zig\
-$haskell\
-$ocaml\
-$vlang\
-$bun\
-$deno\
-$php\
-$cmake\
-$buf\
-\
-$docker_context\
-$kubernetes\
-$helm\
-$terraform\
-$vagrant\
-$aws\
-$gcloud\
-$openstack\
-$azure\
-\
 $package\
 $memory_usage\
 $env_var\
@@ -68,7 +42,7 @@ cyan = "#33998a"
 # ssh_symbol = " "
 
 # sigma theme settings
-# # ➜    󰁕      󱦰 
+# # ➜    󰁕      󱦰
 # [character]
 # success_symbol = "[](bold cyan)"
 # error_symbol = "[](bold red)"
