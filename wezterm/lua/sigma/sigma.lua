@@ -12,13 +12,13 @@ local palette = {
 }
 
 local active_tab = {
-    bg_color = palette.overlay,
-    fg_color = palette.fg,
+    bg_color = palette.bg,
+    fg_color = palette.red,
 }
 
 local inactive_tab = {
     bg_color = palette.bg,
-    fg_color = palette.bg_bright,
+    fg_color = "#575C65",
 }
 
 local M = {}
@@ -55,7 +55,7 @@ function M.colors()
         },
 
         tab_bar = {
-            background = palette.base,
+            background = palette.bg,
             active_tab = active_tab,
             inactive_tab = inactive_tab,
             inactive_tab_hover = active_tab,
