@@ -1,0 +1,8 @@
+/vendor/bundle
+docker-compose.local.yml
+hikari.config.yml
+Dockerfile.local
+.ruby-lsp
+.index.yml
+.solargraph.yml
+.env
