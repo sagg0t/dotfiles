@@ -1,13 +1,55 @@
 local wezterm = require("wezterm")
 local colors = require("lua.sigma.sigma").colors()
 local window_frame = require("lua.sigma.sigma").window_frame()
+local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
+local act = wezterm.action
 
 local config = wezterm.config_builder()
-config.keys = {}
+config.keys = {
+    { key = "S",          mods = "CTRL",           action = workspace_switcher.switch_workspace() },
+    { key = "T",          mods = "CTRL",           action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
+    { key = "[",          mods = "CMD|SHIFT",      action = act.MoveTabRelative(-1) },
+    { key = "]",          mods = "CMD|SHIFT",      action = act.MoveTabRelative(1) },
+    { key = 'w',          mods = 'CMD',            action = act.CloseCurrentTab({ confirm = true }) },
+    { key = 'w',          mods = 'CTRL|SHIFT',     action = act.DisableDefaultAssignment },
+    { key = "5",          mods = "CTRL|ALT|SHIFT", action = act.DisableDefaultAssignment },
+    { key = "%",          mods = "CTRL|ALT",       action = act.DisableDefaultAssignment },
+    { key = "%",          mods = "CTRL|ALT|SHIFT", action = act.DisableDefaultAssignment },
+    { key = "%",          mods = "CTRL|SHIFT",     action = act.DisableDefaultAssignment },
+    { key = "%",          mods = "CTRL",           action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }) },
+    { key = "\"",         mods = "CTRL|ALT",       action = act.DisableDefaultAssignment },
+    { key = "\"",         mods = "CTRL|ALT|SHIFT", action = act.DisableDefaultAssignment },
+    { key = "\"",         mods = "CTRL",           action = act.SplitVertical({ domain = 'CurrentPaneDomain' }) },
+    { key = "u",          mods = "CMD",            action = act.ScrollByPage(-0.5) },
+    { key = "d",          mods = "CMD",            action = act.ScrollByPage(0.5) },
+    { key = "h",          mods = "CMD",            action = act.ActivatePaneDirection("Left") },
+    { key = "H",          mods = "CMD",            action = act.AdjustPaneSize({ "Left", 3 }) },
+    { key = "j",          mods = "CMD",            action = act.ActivatePaneDirection("Down") },
+    { key = "J",          mods = "CMD",            action = act.AdjustPaneSize({ "Down", 3 }) },
+    { key = "k",          mods = "CMD",            action = act.ActivatePaneDirection("Up") },
+    { key = "K",          mods = "CMD",            action = act.AdjustPaneSize({ "Up", 3 }) },
+    { key = "l",          mods = "CMD",            action = act.ActivatePaneDirection("Right") },
+    { key = "L",          mods = "CMD",            action = act.AdjustPaneSize({ "Right", 3 }) },
+    { key = 'PageUp',     mods = 'SHIFT',          action = act.DisableDefaultAssignment },
+    { key = 'PageUp',     mods = 'CTRL',           action = act.DisableDefaultAssignment },
+    { key = 'PageUp',     mods = 'SHIFT|CTRL',     action = act.DisableDefaultAssignment },
+    { key = 'PageDown',   mods = 'SHIFT',          action = act.DisableDefaultAssignment },
+    { key = 'PageDown',   mods = 'CTRL',           action = act.DisableDefaultAssignment },
+    { key = 'PageDown',   mods = 'SHIFT|CTRL',     action = act.DisableDefaultAssignment },
+    { key = 'LeftArrow',  mods = 'SHIFT|CTRL',     action = act.DisableDefaultAssignment },
+    { key = 'LeftArrow',  mods = 'SHIFT|ALT|CTRL', action = act.DisableDefaultAssignment },
+    { key = 'RightArrow', mods = 'SHIFT|CTRL',     action = act.DisableDefaultAssignment },
+    { key = 'RightArrow', mods = 'SHIFT|ALT|CTRL', action = act.DisableDefaultAssignment },
+    { key = 'UpArrow',    mods = 'SHIFT|CTRL',     action = act.DisableDefaultAssignment },
+    { key = 'UpArrow',    mods = 'SHIFT|ALT|CTRL', action = act.DisableDefaultAssignment },
+    { key = 'DownArrow',  mods = 'SHIFT|CTRL',     action = act.DisableDefaultAssignment },
+    { key = 'DownArrow',  mods = 'SHIFT|ALT|CTRL', action = act.DisableDefaultAssignment },
+}
 
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 config.bypass_mouse_reporting_modifiers = "CMD"
 config.max_fps = 120
+config.scrollback_lines = 10000
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
@@ -42,7 +84,7 @@ config.background = {
     {
         source = {
             -- File = "/Users/oleh/Pictures/wallpapers/ahri_spirit_blossom_art.jpg"
-            File = "/Users/sagg0t/Pictures/wallpapers/mythra_art_light.jpg"
+            File = "/Users/oleh/Pictures/wallpapers/mythra_art_light.jpg"
         },
         opacity = 0.55
     },
@@ -55,11 +97,6 @@ config.background = {
         opacity = 0.9
     }
 }
-
-local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
-table.insert(config.keys, { key = "s", mods = "CTRL|SHIFT", action = workspace_switcher.switch_workspace() })
-table.insert(config.keys, { key = "t", mods = "CTRL|SHIFT", action = wezterm.action.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) })
-table.insert(config.keys, { key = "[", mods = "CTRL|SHIFT", action = wezterm.action.SwitchWorkspaceRelative(1) })
 
 local function get_current_working_dir(tab)
     local current_dir = tab.active_pane and tab.active_pane.current_working_dir or { file_path = "" }
