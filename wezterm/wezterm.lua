@@ -50,7 +50,8 @@ config.hyperlink_rules = wezterm.default_hyperlink_rules()
 config.bypass_mouse_reporting_modifiers = "CMD"
 config.max_fps = 120
 config.scrollback_lines = 10000
-config.hide_tab_bar_if_only_one_tab = true
+config.hide_tab_bar_if_only_one_tab = false
+config.tab_and_split_indices_are_zero_based = true
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
 config.macos_window_background_blur = 30
@@ -109,7 +110,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
     local tab_index = wezterm.format({
         { Foreground = { Color = index_color } },
         { Attribute = { Intensity = "Bold" } },
-        { Text = string.format("[%s]", tab.tab_index + 1) }
+        { Text = string.format("[%s]", tab.tab_index) }
     })
 
     local title = tab.tab_title
