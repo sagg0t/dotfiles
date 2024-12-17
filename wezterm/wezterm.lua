@@ -6,8 +6,7 @@ local act = wezterm.action
 
 local config = wezterm.config_builder()
 config.keys = {
-    { key = "S",  mods = "CTRL",        action = workspace_switcher.switch_workspace() },
-    { key = "T",  mods = "CTRL",        action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
+    { key = "f",  mods = "SUPER|SHIFT", action = workspace_switcher.switch_workspace() },
     { key = "[",  mods = "SUPER|SHIFT", action = act.MoveTabRelative(-1) },
     { key = "]",  mods = "SUPER|SHIFT", action = act.MoveTabRelative(1) },
     { key = "w",  mods = "SUPER",       action = act.CloseCurrentTab({ confirm = true }) },
