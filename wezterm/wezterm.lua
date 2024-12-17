@@ -129,7 +129,7 @@ wezterm.on("update-right-status", function(window, pane)
         wezterm.format({
             { Foreground = { Color = colors.ansi[6] } },
             { Attribute = { Intensity = "Bold" } },
-            { Text = window:active_workspace() }
+            { Text = string.gsub(window:active_workspace(), "(.*[/\\])(.*)", "%2") }
         })
     )
 end)
