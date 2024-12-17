@@ -83,8 +83,8 @@ config.window_padding = {
 config.background = {
     {
         source = {
-            -- File = "/Users/oleh/Pictures/wallpapers/ahri_spirit_blossom_art.jpg"
-            File = "/Users/oleh/Pictures/wallpapers/mythra_art_light.jpg"
+            -- File = wezterm.home_dir .. "/Pictures/wallpapers/ahri_spirit_blossom_art.jpg"
+            File = wezterm.home_dir .. "/Pictures/wallpapers/mythra_art_light.jpg"
         },
         opacity = 0.55
     },
