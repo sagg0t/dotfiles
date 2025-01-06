@@ -10,7 +10,7 @@ config.keys = {
     { key = "[",  mods = "SUPER|SHIFT", action = act.MoveTabRelative(-1) },
     { key = "]",  mods = "SUPER|SHIFT", action = act.MoveTabRelative(1) },
     { key = "w",  mods = "SUPER",       action = act.CloseCurrentTab({ confirm = true }) },
-    { key = "%",  mods = "SUPER",       action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+    { key = "|",  mods = "SUPER",       action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
     { key = "\"", mods = "SUPER",       action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
     { key = "u",  mods = "SUPER",       action = act.ScrollByPage(-0.5) },
     { key = "d",  mods = "SUPER",       action = act.ScrollByPage(0.5) },
@@ -134,7 +134,7 @@ config.show_new_tab_button_in_tab_bar = false
 config.macos_window_background_blur = 30
 config.native_macos_fullscreen_mode = true
 
-config.font_size = 19
+config.font_size = 16
 
 config.harfbuzz_features = {
     "calt", "liga", "dlig",
