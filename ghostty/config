@@ -1,0 +1,23 @@
+theme = sigma
+
+background-opacity = 0.8
+background-blur-radius = 30
+
+font-size = 14
+# font-family = RobotoMono Nerd Font Mono
+# font-family = RobotoMono Nerd Font Mono
+
+shell-integration = fish
+cursor-style = underline
+
+window-inherit-font-size = false
+window-colorspace = "display-p3"
+window-padding-balance = true
+window-padding-color = extend-always
+
+macos-titlebar-style = tabs
+macos-option-as-alt = left
+
+# Keybinds
+# keybind = super+k=unbind
+# keybind = ctrl+k=clear_screen

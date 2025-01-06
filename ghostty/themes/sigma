@@ -1,0 +1,22 @@
+foreground = D4D8C0
+background = 1A1A1A
+selection-background = D4D8C0
+
+# bg_bright = "#373C45",
+
+palette = 0=1A1A1A
+palette = 1=DC3C70
+palette = 2=44B273
+palette = 3=FFEE99
+palette = 4=58A3CF
+palette = 5=A285EA
+palette = 6=33998A
+palette = 7=D4D8C0
+palette = 8=1A1A1A
+palette = 9=DC3C70
+palette = 10=44B273
+palette = 11=FFEE99
+palette = 12=58A3CF
+palette = 13=A285EA
+palette = 14=33998A
+palette = 15=D4D8C0
