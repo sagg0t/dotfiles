@@ -1,3 +1,5 @@
+# vim: set ft=conf
+
 foreground = D4D8C0
 background = 1A1A1A
 selection-background = D4D8C0
