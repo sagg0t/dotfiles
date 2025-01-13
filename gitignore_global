@@ -6,3 +6,4 @@ Dockerfile.local
 .index.yml
 .solargraph.yml
 .env
+.nvim.lua
