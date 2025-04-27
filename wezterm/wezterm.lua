@@ -5,24 +5,26 @@ local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/s
 local act = wezterm.action
 
 local config = wezterm.config_builder()
+config.term = "wezterm"
+
 config.keys = {
-    { key = "f",  mods = "SUPER|SHIFT", action = workspace_switcher.switch_workspace() },
-    { key = "[",  mods = "SUPER|SHIFT", action = act.MoveTabRelative(-1) },
-    { key = "]",  mods = "SUPER|SHIFT", action = act.MoveTabRelative(1) },
-    { key = "w",  mods = "SUPER",       action = act.CloseCurrentTab({ confirm = true }) },
-    { key = "|",  mods = "SUPER",       action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-    { key = "\"", mods = "SUPER",       action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-    { key = "u",  mods = "SUPER",       action = act.ScrollByPage(-0.5) },
-    { key = "d",  mods = "SUPER",       action = act.ScrollByPage(0.5) },
-    { key = "h",  mods = "SUPER",       action = act.ActivatePaneDirection("Left") },
-    { key = "H",  mods = "SUPER",       action = act.AdjustPaneSize({ "Left", 3 }) },
-    { key = "j",  mods = "SUPER",       action = act.ActivatePaneDirection("Down") },
-    { key = "J",  mods = "SUPER",       action = act.AdjustPaneSize({ "Down", 3 }) },
-    { key = "k",  mods = "SUPER",       action = act.ActivatePaneDirection("Up") },
-    { key = "K",  mods = "SUPER",       action = act.AdjustPaneSize({ "Up", 3 }) },
-    { key = "l",  mods = "SUPER",       action = act.ActivatePaneDirection("Right") },
-    { key = "L",  mods = "SUPER",       action = act.AdjustPaneSize({ "Right", 3 }) },
-    { key = "L",  mods = "SUPER|ALT",   action = act.ShowDebugOverlay },
+    { key = "f", mods = "SUPER|SHIFT", action = workspace_switcher.switch_workspace() },
+    { key = "[", mods = "SUPER|SHIFT", action = act.MoveTabRelative(-1) },
+    { key = "]", mods = "SUPER|SHIFT", action = act.MoveTabRelative(1) },
+    { key = "w", mods = "SUPER",       action = act.CloseCurrentTab({ confirm = true }) },
+    { key = "s", mods = "SUPER",       action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+    { key = "S", mods = "SUPER",       action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+    { key = "u", mods = "SUPER",       action = act.ScrollByPage(-0.5) },
+    { key = "d", mods = "SUPER",       action = act.ScrollByPage(0.5) },
+    { key = "h", mods = "SUPER",       action = act.ActivatePaneDirection("Left") },
+    { key = "H", mods = "SUPER",       action = act.AdjustPaneSize({ "Left", 3 }) },
+    { key = "j", mods = "SUPER",       action = act.ActivatePaneDirection("Down") },
+    { key = "J", mods = "SUPER",       action = act.AdjustPaneSize({ "Down", 3 }) },
+    { key = "k", mods = "SUPER",       action = act.ActivatePaneDirection("Up") },
+    { key = "K", mods = "SUPER",       action = act.AdjustPaneSize({ "Up", 3 }) },
+    { key = "l", mods = "SUPER",       action = act.ActivatePaneDirection("Right") },
+    { key = "L", mods = "SUPER",       action = act.AdjustPaneSize({ "Right", 3 }) },
+    { key = "L", mods = "SUPER|ALT",   action = act.ShowDebugOverlay },
 
     {
         key = "r",
@@ -121,13 +123,16 @@ config.keys = {
     { key = "UpArrow",    mods = "SHIFT|ALT|CTRL", action = act.DisableDefaultAssignment },
     { key = "DownArrow",  mods = "SHIFT|CTRL",     action = act.DisableDefaultAssignment },
     { key = "DownArrow",  mods = "SHIFT|ALT|CTRL", action = act.DisableDefaultAssignment },
+
+    { key = "F1",         mods = "SUPER",          action = act.Nop },
+    { key = "F2",         mods = "SUPER",          action = act.Nop },
 }
 
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 config.bypass_mouse_reporting_modifiers = "CMD"
 config.max_fps = 120
 config.scrollback_lines = 10000
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.tab_and_split_indices_are_zero_based = true
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
@@ -136,18 +141,18 @@ config.native_macos_fullscreen_mode = true
 
 config.font_size = 16
 
-config.harfbuzz_features = {
-    "calt", "liga", "dlig",
-    "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08",
-}
-
-config.font = wezterm.font("CodeNewRoman Nerd Font")
+-- config.font = wezterm.font("CodeNewRoman Nerd Font")
 -- config.font = wezterm.font("Hack Nerd Font")
--- config.font = wezterm.font("Monaspace Neon Var") -- neo-grotesque sans
+config.font = wezterm.font("Monaspace Neon") -- neo-grotesque sans
 -- config.font = wezterm.font("Monaspace Argon Var") -- humanist sans
 -- config.font = wezterm.font("Monaspace Xenon Var") -- serif
 -- config.font = wezterm.font("Monaspace Radon Var") -- handwriting
 -- config.font = wezterm.font("Monaspace Krypton Var") -- mechanical sans
+
+config.harfbuzz_features = {
+    "calt", "liga", "dlig",
+    "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09"
+}
 
 config.colors = colors
 config.window_frame = window_frame
@@ -162,9 +167,10 @@ config.background = {
     {
         source = {
             -- File = wezterm.home_dir .. "/Pictures/wallpapers/ahri_spirit_blossom_art.jpg"
-            File = wezterm.home_dir .. "/Pictures/wallpapers/mythra_art_light.jpg"
+            -- File = wezterm.home_dir .. "/Pictures/wallpapers/mythra_art_light.jpg"
+            File = wezterm.home_dir .. "/Pictures/art/Mythra/smash_wall.jpg"
         },
-        opacity = 0.55
+        opacity = 0.7
     },
     {
         source = {
