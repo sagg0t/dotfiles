@@ -7,3 +7,5 @@ Dockerfile.local
 .solargraph.yml
 .env
 .nvim.lua
+
+.DS_Store
