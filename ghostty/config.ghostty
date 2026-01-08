@@ -1,0 +1,68 @@
+theme = sigma
+
+auto-update-channel = tip
+auto-update = check
+
+# background-opacity = 0.9
+background-opacity = 1
+background-blur = true
+background-image = ~/Pictures/art/Mythra/smash_wall.jpg
+background-image-opacity = 0.09
+background-image-fit = cover
+
+# unfocused-split-opacity = 0.88
+unfocused-split-opacity = 1
+unfocused-split-fill = #000000
+
+font-size = 18
+font-family = Monaspace Neon Var
+# font-family = Liberation Mono
+
+# font-style = Light
+# font-style-bold = ExtraBold
+# font-style-italic = Light Italic
+# font-style-bold-italic = Bold Italic
+
+font-feature = ss01
+font-feature = ss03
+font-feature = ss06
+font-feature = ss07
+font-feature = ss08
+font-feature = ss09
+font-feature = liga
+font-feature = tnum
+font-feature = cv02
+font-feature = cv11
+
+shell-integration = fish
+shell-integration-features = no-cursor,title
+cursor-style = underline
+
+window-inherit-font-size = false
+window-colorspace = display-p3
+window-padding-balance = true
+window-padding-color = extend-always
+window-vsync = true
+
+macos-window-shadow = false
+# macos-non-native-fullscreen = padded-notch
+macos-titlebar-style = transparent
+macos-option-as-alt = left
+macos-icon = blueprint
+
+quick-terminal-autohide = false
+quick-terminal-animation-duration = 0
+quick-terminal-position = center
+quick-terminal-size = 65%,80%
+
+quit-after-last-window-closed = true
+
+# Keybinds
+keybind = global:super+k=unbind
+keybind = ctrl+k=clear_screen
+keybind = global:super+grave_accent=toggle_quick_terminal
+keybind = global:super+h=unbind
+keybind = super+h=goto_split:left
+keybind = super+j=goto_split:bottom
+keybind = super+k=goto_split:top
+keybind = super+l=goto_split:right
