@@ -3,10 +3,8 @@
 SETUVAR CPPFLAGS:\x2dI/opt/homebrew/opt/libpq/include
 SETUVAR LDFLAGS:\x2dL/opt/homebrew/opt/libpq/lib
 SETUVAR --path PKG_CONFIG_PATH:/opt/homebrew/opt/libpq/lib/pkgconfig
-SETUVAR --export --path VK_ADD_LAYER_PATH:/Users/sagg0t/Library/VulkanSDK/1\x2e3\x2e243\x2e0/macOS/share/vulkan/explicit_layer\x2ed
-SETUVAR --export VK_DRIVER_FILES:/Users/sagg0t/Library/VulkanSDK/1\x2e3\x2e243\x2e0/macOS/share/vulkan/icd\x2ed/MoltenVK_icd\x2ejson
-SETUVAR --export VK_ICD_FILENAMES:/Users/sagg0t/Library/VulkanSDK/1\x2e3\x2e243\x2e0/macOS/share/vulkan/icd\x2ed/MoltenVK_icd\x2ejson
-SETUVAR --export VULKAN_SDK:/Users/sagg0t/Library/VulkanSDK/1\x2e3\x2e243\x2e0/macOS
+SETUVAR --export VK_DRIVER_FILES:/Users/sagg0t/devel/VulkanSDK/macOS/share/vulkan/icd\x2ed/MoltenVK_icd\x2ejson
+SETUVAR --export VULKAN_SDK:/Users/sagg0t/devel/VulkanSDK/macOS
 SETUVAR __fish_initialized:3800
 SETUVAR _fish_abbr_cucumber:bundle\x20exec\x20cucumber
 SETUVAR _fish_abbr_rackup:bundle\x20exec\x20rackup
@@ -47,4 +45,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/sagg0t/\x2erustup/toolchains/nightly\x2daarch64\x2dapple\x2ddarwin/bin\x1e/Users/sagg0t/\x2elocal/share/nvim/mason/bin\x1e/Users/sagg0t/\x2elocal/bin\x1e/Users/sagg0t/go/bin\x1e/opt/homebrew/bin
+SETUVAR fish_user_paths:/Users/sagg0t/\x2erustup/toolchains/nightly\x2daarch64\x2dapple\x2ddarwin/bin\x1e/Users/sagg0t/\x2elocal/share/nvim/mason/bin\x1e/Users/sagg0t/\x2elocal/bin\x1e/Users/sagg0t/go/bin\x1e/opt/homebrew/bin\x1e/Applications/Ghostty\x2eapp/Contents/MacOS

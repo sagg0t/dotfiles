@@ -16,7 +16,9 @@ if status is-interactive
     alias nyan="nvim"
 
     zoxide init fish | source
-    rbenv init - fish | source
+
+    alias cd="z"
+    # rbenv init - fish | source
     starship init fish | source
 end
 
