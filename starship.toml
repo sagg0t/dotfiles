@@ -2,40 +2,27 @@ format = """
 $username\
 $hostname\
 $localip\
-$shlvl\
 $directory\
 $git_branch\
 $git_commit\
 $git_state\
-$git_metrics\
-$git_status\
-\
 $package\
-$memory_usage\
-$env_var\
-$custom\
 $cmd_duration\
 $line_break\
-$jobs\
-$battery\
-$time\
 $status\
-$os\
-$container\
-$shell\
 $character"""
 
 palette = "sigma"
 
 [palettes.sigma]
-black = "#1a1a1a"
+black = "#1A1A1A"
 white = "#D4D8C0"
 green = "#44B273"
-red = "#dc3c70"
-purple = "#a285ea"
-blue = "#58a3cf"
+red = "#D06070"
+purple = "#A285EA"
+blue = "#569CD6"
 yellow = "#FFEE99"
-cyan = "#33998a"
+cyan = "#33998A"
 
 
 # [hostname]
@@ -54,6 +41,7 @@ cyan = "#33998a"
 
 [character]
 # Note the use of Catppuccin color 'maroon'
+# success_symbol = "[❯](green)"
 success_symbol = "[❯](green)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
@@ -65,10 +53,12 @@ truncation_length = 4
 style = "bold blue"
 
 [git_branch]
-format = "[$symbol$branch(:$remote_branch)]($style) "
-style = "bold red"
+format = "[$symbol](red)[$branch(:$remote_branch)](bold red) "
 symbol = " "
 # symbol = " "
+
+[git_status]
+style = "red"
 
 [ruby]
 format = "[$symbol]($style)[$version ](bold yellow)"
@@ -76,10 +66,9 @@ version_format = "${raw}"
 # symbol = " "
 
 [golang]
-format = "[$symbol]($style)[$version ](bold yellow)"
+format = "[$symbol](bold blue)[$version ](bold yellow)"
 version_format = "${raw}"
 # symbol = " "
-style = "bold blue"
 
 # [c]
 # symbol = " "
